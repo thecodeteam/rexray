@@ -342,7 +342,7 @@ func createUnitFile(ctx apitypes.Context) error {
 
 const unitFileTemplate = `[Unit]
 Description={{.BinFileName}}
-Wants=scini.service
+Wants=.service
 Before=docker.service
 After=scini.service
 
