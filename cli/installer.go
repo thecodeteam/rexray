@@ -342,9 +342,9 @@ func createUnitFile(ctx apitypes.Context) error {
 
 const unitFileTemplate = `[Unit]
 Description={{.BinFileName}}
-Wants=.service
+Wants=systemd-udev-settle.service
 Before=docker.service
-After=scini.service
+After=systemd-udev-settle.service
 
 [Service]
 EnvironmentFile={{.EnvFilePath}}
